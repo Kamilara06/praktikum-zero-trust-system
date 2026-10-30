@@ -1,0 +1,25 @@
+{
+  "name": "zero-trust-system",
+  "version": "1.0.0",
+  "description": "Praktikum Zero Trust Security: API Gateway (PEP + PE/PA) dan microservices Node.js sesuai NIST SP 800-207",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "seed": "node shared/seed.js",
+    "start": "node scripts/start-all.js",
+    "start:gateway": "node gateway/index.js",
+    "start:nilai": "node service-nilai/index.js",
+    "start:transkrip": "node service-transkrip/index.js",
+    "test": "node --test test/smoke.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^13.0.3",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.3",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
